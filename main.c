@@ -10,11 +10,11 @@ struct Book {
 int main(int argc, char *argv[]) {
 	struct Book *p;
 	
-	p = (struct Book*)melloc(2*sizeof(struct Book));
+	p = (struct Book*)malloc(2*sizeof(struct Book));
 	
 	if (p==NULL) {
 		printf("메모리 할당 오류\n");
-		return 1;
+		return -1;
 	}
 	
 	p->number = 1;
